@@ -1,0 +1,181 @@
+.pricing-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin: var(--space-12) 0;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.pricing-card.popular {
+  border: 2px solid var(--color-accent-cyan);
+  transform: scale(1.05);
+}
+
+/* Basic Tier - Blue Theme */
+.pricing-card:nth-child(1) {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.05));
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.pricing-card:nth-child(1) .tier-name {
+  color: #3b82f6;
+}
+
+.pricing-card:nth-child(1) .amount,
+.pricing-card:nth-child(1) .custom-price {
+  color: #3b82f6;
+}
+
+/* Premium Tier - Cyan Theme (Popular) */
+.pricing-card:nth-child(2) {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(168, 85, 247, 0.1));
+}
+
+/* Enterprise Tier - Purple Theme */
+.pricing-card:nth-child(3) {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.05));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.pricing-card:nth-child(3) .tier-name {
+  color: #a855f7;
+}
+
+.pricing-card:nth-child(3) .amount,
+.pricing-card:nth-child(3) .custom-price {
+  color: #a855f7 !important;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-2) var(--space-4);
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-purple));
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  border-radius: 20px;
+}
+
+.tier-name {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.tier-price {
+  margin-bottom: var(--space-6);
+}
+
+.currency {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+}
+
+.amount {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-accent-cyan);
+  display: block;
+}
+
+.custom-price {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-accent-cyan);
+}
+
+.tier-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: var(--space-8);
+  flex: 1;
+}
+
+.tier-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  color: var(--text-secondary);
+}
+
+.feature-check {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+.tier-button {
+  width: 100%;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tier-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Basic tier button */
+.pricing-card:nth-child(1) .tier-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  color: white;
+}
+
+.pricing-card:nth-child(1) .tier-button:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Premium tier button (popular) */
+.pricing-card:nth-child(2) .tier-button {
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-purple));
+  border: none;
+  color: var(--text-primary);
+  font-weight: var(--font-bold);
+}
+
+.pricing-card:nth-child(2) .tier-button:hover {
+  background: linear-gradient(135deg, #00d4ff, #9333ea);
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.4);
+}
+
+/* Enterprise tier button */
+.pricing-card:nth-child(3) .tier-button {
+  background: linear-gradient(135deg, #a855f7, #9333ea);
+  border: none;
+  color: white;
+}
+
+.pricing-card:nth-child(3) .tier-button:hover {
+  background: linear-gradient(135deg, #9333ea, #7c3aed);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .pricing-tiers {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .pricing-card.popular {
+    transform: scale(1);
+  }
+}

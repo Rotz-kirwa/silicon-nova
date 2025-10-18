@@ -1,0 +1,100 @@
+.service-detail-card {
+  margin-bottom: var(--space-8);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.service-card-icon {
+  font-size: 3rem;
+}
+
+.service-card-header h3 {
+  font-size: var(--text-3xl);
+  color: var(--text-primary);
+}
+
+.service-description {
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.expand-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-accent-cyan);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-accent-cyan);
+  border-radius: 8px;
+  background: rgba(0, 240, 255, 0.1);
+  transition: all var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+}
+
+.expand-button:hover {
+  color: var(--color-accent-purple);
+  border-color: var(--color-accent-purple);
+  background: rgba(168, 85, 247, 0.1);
+  transform: translateY(-2px);
+}
+
+.service-features {
+  margin-bottom: var(--space-6);
+  padding: var(--space-6);
+  background-color: rgba(0, 240, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-800);
+}
+
+.service-features h4 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.service-features ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-secondary);
+}
+
+.check-icon {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+.service-cta {
+  width: auto;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-purple));
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+.service-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.3);
+}

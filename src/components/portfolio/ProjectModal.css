@@ -1,0 +1,118 @@
+.project-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.project-modal-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-modal-description {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+}
+
+.project-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: rgba(0, 240, 255, 0.05);
+  border-radius: 8px;
+}
+
+.info-item {
+  color: var(--text-secondary);
+}
+
+.info-item strong {
+  color: var(--text-primary);
+  margin-right: var(--space-2);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.project-modal-tech {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.project-modal-tech strong {
+  color: var(--text-primary);
+}
+
+.tech-list {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  padding: var(--space-2) var(--space-4);
+  background-color: rgba(0, 240, 255, 0.1);
+  border: 1px solid var(--color-accent-cyan);
+  border-radius: 6px;
+  font-size: var(--text-sm);
+  color: var(--color-accent-cyan);
+}
+
+.project-testimonial {
+  padding: var(--space-6);
+  background-color: var(--color-gray-800);
+  border-left: 4px solid var(--color-accent-cyan);
+  border-radius: 8px;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.star {
+  color: #fbbf24;
+}
+
+.project-testimonial blockquote {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-relaxed);
+}
+
+.project-testimonial cite {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.visit-site-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-6);
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-purple));
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+  border-radius: 8px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.visit-site-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .project-modal-info {
+    padding: var(--space-3);
+  }
+
+  .project-testimonial {
+    padding: var(--space-4);
+  }
+}

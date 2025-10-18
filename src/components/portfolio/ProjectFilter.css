@@ -1,0 +1,27 @@
+.project-filter {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-12);
+}
+
+.filter-button {
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-gray-800);
+  color: var(--text-secondary);
+  font-weight: var(--font-medium);
+  border-radius: 8px;
+  text-transform: capitalize;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.filter-button:hover {
+  background-color: var(--color-gray-700);
+  color: var(--text-primary);
+}
+
+.filter-button.active {
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-purple));
+  color: var(--text-primary);
+}
