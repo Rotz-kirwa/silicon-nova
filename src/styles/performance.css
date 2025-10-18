@@ -1,0 +1,122 @@
+/* Performance optimizations for mobile devices */
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize scrolling performance */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Reduce repaints and reflows */
+.layout-optimized {
+  contain: layout style paint;
+}
+
+/* Optimize images for mobile */
+@media (max-width: 768px) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  }
+  
+  /* Lazy loading hint */
+  img[loading="lazy"] {
+    content-visibility: auto;
+  }
+}
+
+/* Reduce motion for better performance on low-end devices */
+@media (prefers-reduced-motion: reduce) or (max-width: 480px) {
+  * {
+    animation-duration: 0.1s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.1s !important;
+  }
+  
+  .hero-grid {
+    animation: none !important;
+    background: none !important;
+  }
+  
+  .whatsapp-widget {
+    animation: none !important;
+  }
+}
+
+/* Optimize fonts for mobile */
+@media (max-width: 768px) {
+  body {
+    font-display: swap;
+    text-rendering: optimizeSpeed;
+  }
+}
+
+/* Critical CSS for above-the-fold content */
+.critical-section {
+  contain: layout;
+  content-visibility: auto;
+}
+
+/* Optimize transforms for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .transform-hover:hover {
+    transform: none !important;
+  }
+  
+  .transform-hover:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Prevent layout shifts */
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+}
+
+.aspect-ratio-container::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.aspect-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Optimize button interactions for touch */
+@media (hover: none) and (pointer: coarse) {
+  button, .button, a[role="button"] {
+    -webkit-tap-highlight-color: rgba(0, 240, 255, 0.1);
+    tap-highlight-color: rgba(0, 240, 255, 0.1);
+  }
+}
+
+/* Memory optimization */
+@media (max-width: 480px) {
+  /* Reduce shadow complexity */
+  .card.hoverable:hover {
+    box-shadow: 0 2px 8px rgba(0, 240, 255, 0.1) !important;
+  }
+  
+  /* Simplify gradients */
+  .button-primary {
+    background: var(--color-accent-cyan) !important;
+  }
+  
+  /* Reduce backdrop filters */
+  .header.scrolled {
+    backdrop-filter: none !important;
+    background-color: rgba(10, 22, 40, 0.98) !important;
+  }
+}

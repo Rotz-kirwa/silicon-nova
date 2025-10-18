@@ -337,4 +337,38 @@ export const projects = [
     liveUrl: 'https://www.sohostudio.co.ke/?utm_source=chatgpt.com',
     completedDate: '2024-10',
   },
+  {
+    id: '20',
+    title: 'StayEase Airbnb',
+    description: 'Modern Airbnb clone with property listings, booking system, user reviews, and host dashboard.',
+    category: 'ecommerce',
+    client: 'StayEase Platform',
+    featured: true,
+    images: {
+      thumbnail: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
+      full: [
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=800&fit=crop',
+      ],
+    },
+    technologies: [],
+    liveUrl: 'https://air-bnb-alpha-pearl.vercel.app/',
+    completedDate: '2024-11',
+  },
+  {
+    id: '21',
+    title: 'Elite Barber Shop',
+    description: 'Professional barber shop website with appointment booking, service catalog, and barber profiles.',
+    category: 'beauty',
+    client: 'Elite Barber Shop',
+    featured: true,
+    images: {
+      thumbnail: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&h=600&fit=crop',
+      full: [
+        'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=800&fit=crop',
+      ],
+    },
+    technologies: [],
+    liveUrl: 'https://barber-project-ivory.vercel.app/',
+    completedDate: '2024-12',
+  },
 ];
